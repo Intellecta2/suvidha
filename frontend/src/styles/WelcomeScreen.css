@@ -1,0 +1,141 @@
+.welcome-screen {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: linear-gradient(135deg, #0052CC 0%, #003D99 100%);
+  min-height: 100vh;
+}
+
+.welcome-container {
+  background: white;
+  border-radius: 12px;
+  padding: 40px;
+  max-width: 600px;
+  width: 100%;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.16);
+  text-align: center;
+}
+
+.welcome-header h1 {
+  color: var(--dark);
+  font-size: 28px;
+  margin-bottom: 8px;
+}
+
+.welcome-header .subtitle {
+  color: var(--primary);
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.welcome-content {
+  margin: 32px 0;
+}
+
+.info-box {
+  background: #F5F7FA;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 24px;
+}
+
+.info-box .description {
+  font-size: 16px;
+  color: var(--text);
+  line-height: 1.6;
+}
+
+.options-section {
+  margin: 30px 0;
+}
+
+.language-selector,
+.accessibility-selector {
+  margin-bottom: 24px;
+  text-align: left;
+}
+
+.language-selector label,
+.accessibility-selector label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: var(--dark);
+}
+
+.button-group {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.lang-btn,
+.mode-btn {
+  padding: 12px;
+  border: 2px solid var(--border);
+  border-radius: 6px;
+  background: white;
+  cursor: pointer;
+  font-weight: 600;
+  transition: var(--transition);
+  font-size: 14px;
+}
+
+.lang-btn:hover,
+.mode-btn:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+.lang-btn.active,
+.mode-btn.active {
+  background: var(--primary);
+  color: white;
+  border-color: var(--primary);
+}
+
+.proceed-btn {
+  margin-top: 24px;
+}
+
+.welcome-footer {
+  border-top: 1px solid var(--border);
+  padding-top: 16px;
+  margin-top: 24px;
+  color: var(--text);
+  font-size: 12px;
+}
+
+/* Accessibility Mode */
+.welcome-screen.accessibility-mode .welcome-container {
+  padding: 60px 40px;
+}
+
+.welcome-screen.accessibility-mode .welcome-header h1 {
+  font-size: 36px;
+  margin-bottom: 16px;
+}
+
+.welcome-screen.accessibility-mode .button-group {
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+.welcome-screen.accessibility-mode .lang-btn,
+.welcome-screen.accessibility-mode .mode-btn {
+  padding: 16px;
+  font-size: 16px;
+  min-height: 60px;
+}
+
+@media (max-width: 600px) {
+  .welcome-container {
+    padding: 24px;
+  }
+
+  .button-group {
+    grid-template-columns: 1fr;
+  }
+}

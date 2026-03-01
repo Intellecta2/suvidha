@@ -1,0 +1,257 @@
+.tracking-screen {
+  flex: 1;
+  display: flex;
+  padding: 20px;
+  background: #F5F7FA;
+}
+
+.tracking-container {
+  background: white;
+  border-radius: 12px;
+  padding: 32px;
+  max-width: 700px;
+  width: 100%;
+  margin: 0 auto;
+  box-shadow: var(--shadow);
+}
+
+.tracking-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.tracking-header h1 {
+  flex: 1;
+  color: var(--dark);
+  font-size: 24px;
+  margin: 0;
+}
+
+.complaints-list .loading,
+.complaints-list .no-data {
+  text-align: center;
+  color: var(--text);
+  padding: 40px 20px;
+  font-size: 16px;
+}
+
+.complaints-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.complaint-card {
+  padding: 16px;
+  border-radius: 8px;
+  background: #F5F7FA;
+  cursor: pointer;
+  transition: var(--transition);
+  border-left: 4px solid;
+}
+
+.complaint-card:hover {
+  background: #ECF0F1;
+  transform: translateX(4px);
+}
+
+.complaint-card .complaint-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.complaint-card strong {
+  color: var(--dark);
+  font-weight: 600;
+}
+
+.complaint-card .status-badge {
+  padding: 4px 8px;
+  font-size: 11px;
+}
+
+.complaint-card .complaint-desc {
+  color: var(--text);
+  font-size: 14px;
+  margin-bottom: 8px;
+  line-height: 1.5;
+}
+
+.complaint-card small {
+  color: #7F8C8D;
+  font-size: 12px;
+}
+
+.complaint-detail {
+  animation: slideIn 0.3s ease;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.detail-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--border);
+}
+
+.detail-header h2 {
+  color: var(--dark);
+  font-size: 20px;
+  margin: 0;
+}
+
+.detail-content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.detail-row {
+  padding: 12px;
+  background: #F5F7FA;
+  border-radius: 6px;
+}
+
+.detail-row.full {
+  grid-column: 1 / -1;
+}
+
+.detail-row label {
+  display: block;
+  font-size: 12px;
+  color: var(--text);
+  text-transform: uppercase;
+  margin-bottom: 4px;
+  font-weight: 600;
+}
+
+.detail-row strong {
+  color: var(--dark);
+  font-size: 15px;
+}
+
+.detail-row p {
+  color: var(--text);
+  margin: 0;
+  line-height: 1.6;
+}
+
+.timeline-section {
+  margin-top: 24px;
+  padding-top: 24px;
+  border-top: 1px solid var(--border);
+}
+
+.timeline-section h3 {
+  color: var(--dark);
+  font-size: 16px;
+  margin-bottom: 16px;
+}
+
+.timeline {
+  position: relative;
+  padding-left: 24px;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 4px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: var(--border);
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.timeline-dot {
+  position: absolute;
+  left: -20px;
+  top: 4px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--primary);
+  border: 3px solid white;
+  box-shadow: 0 0 0 2px var(--primary);
+}
+
+.timeline-content strong {
+  color: var(--dark);
+  font-size: 14px;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.timeline-content p {
+  color: var(--text);
+  font-size: 13px;
+  margin-bottom: 4px;
+}
+
+.timeline-content small {
+  color: #7F8C8D;
+  font-size: 12px;
+}
+
+/* Accessibility Mode */
+.tracking-screen.accessibility-mode .tracking-container {
+  padding: 48px;
+}
+
+.tracking-screen.accessibility-mode .tracking-header h1 {
+  font-size: 32px;
+}
+
+.tracking-screen.accessibility-mode .complaint-card {
+  padding: 20px;
+  margin-bottom: 16px;
+}
+
+.tracking-screen.accessibility-mode .complaint-card strong {
+  font-size: 16px;
+}
+
+.tracking-screen.accessibility-mode .complaint-card .complaint-desc {
+  font-size: 16px;
+}
+
+.tracking-screen.accessibility-mode .detail-row {
+  padding: 16px;
+  font-size: 16px;
+}
+
+.tracking-screen.accessibility-mode .detail-row label {
+  font-size: 14px;
+}
+
+@media (max-width: 600px) {
+  .tracking-container {
+    padding: 20px;
+  }
+
+  .tracking-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
